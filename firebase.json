@@ -28,7 +28,12 @@
   "hosting": {
     "site":"dashboard-unix",
     "public": "dist",
-    "source": ".",
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ],
     "ignore": [
       "firebase.json",
       "**/.*",
