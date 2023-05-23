@@ -26,7 +26,8 @@
     "rules": "storage.rules"
   },
   "hosting": {
-    "site": "dashboard-unix",
+    "site":"dashboard-unix",
+    "public": "dist",
     "source": ".",
     "ignore": [
       "firebase.json",
