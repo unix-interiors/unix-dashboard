@@ -12,6 +12,7 @@ function Feedback() {
 
   async function get() {
     try {
+      setLoadingTable(true);
       const docs = await getDocs(
         query(
           collection(firestoreDB, 'unix-feedback'),
@@ -19,7 +20,6 @@ function Feedback() {
           limit(50)
         )
       );
-      console.log(docs.docs.length);
 
       const data: any = [];
       docs.forEach((doc) => {
@@ -29,7 +29,7 @@ function Feedback() {
       setLoadingTable(false);
     } catch (error) {
       setLoadingTable(false);
-      console.log(error);
+      console.error('Error - Feedback', error);
     }
   }
 

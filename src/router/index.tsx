@@ -4,12 +4,17 @@ import { ENDPOINTS } from '../constants/endpoint';
 import Feedback from '../pages/feedback';
 
 const Dashboard = lazy(() => import('../pages/dashboard'));
+const Staff = lazy(() => import('../pages/staff'));
 const NotFound = lazy(() => import('../pages/notfound'));
 
 const allRoutes: RouteObject[] = [
   {
     path: ENDPOINTS.DASHBOARD,
     element: <Dashboard />,
+  },
+  {
+    path: ENDPOINTS.STAFF,
+    element: <Staff />,
   },
   {
     path: ENDPOINTS.FEEDBACK,

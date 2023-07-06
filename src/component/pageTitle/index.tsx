@@ -12,7 +12,14 @@ const PageTitle = ({ title, heading }: IProps) => {
   }, [title]);
 
   return (
-    <Typography variant="h2" mb="1.5rem" fontSize={18} fontWeight={500}>
+    <Typography
+      variant="h2"
+      mb="1.5rem"
+      // eslint-disable-next-line react/prop-types
+      color={(props) => props.palette.common.black}
+      fontSize={18}
+      fontWeight={500}
+    >
       {heading}
     </Typography>
   );

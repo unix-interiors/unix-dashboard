@@ -1,9 +1,10 @@
 import { List, Typography } from '@mui/material';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useMatch, useNavigate } from 'react-router-dom';
 import { map } from 'lodash';
 import DashboardRoundedIcon from '@mui/icons-material/DashboardRounded';
 import PeopleAltRoundedIcon from '@mui/icons-material/PeopleAltRounded';
 import GradingRoundedIcon from '@mui/icons-material/GradingRounded';
+import Diversity3RoundedIcon from '@mui/icons-material/Diversity3Rounded';
 
 import { ENDPOINTS } from '../../constants/endpoint';
 import { ListItem, Wrapper } from './style';
@@ -15,9 +16,14 @@ const NAV_LIST = [
     to: ENDPOINTS.DASHBOARD,
   },
   {
-    title: 'Staff',
+    title: 'Client',
     icon: <PeopleAltRoundedIcon color="inherit" />,
-    to: '/staff',
+    to: ENDPOINTS.CLIENT,
+  },
+  {
+    title: 'Staff',
+    icon: <Diversity3RoundedIcon color="inherit" />,
+    to: ENDPOINTS.STAFF,
   },
   {
     title: 'Feedback',
@@ -29,6 +35,9 @@ const NAV_LIST = [
 function SideNav() {
   const router = useLocation();
   const navigate = useNavigate();
+  const match = useMatch(NAV_LIST[2].to);
+
+  console.log(match);
 
   return (
     <Wrapper>

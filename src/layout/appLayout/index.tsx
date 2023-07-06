@@ -2,9 +2,10 @@ import { Suspense } from 'react';
 import { Grid } from '@mui/material';
 import { Outlet } from 'react-router-dom';
 
-import Loader from '../../component/loader';
-import Header from '../../component/header';
-import SideNav from '../../component/sidenav';
+import Loader from '@unix/component/loader';
+import Header from '@unix/component/header';
+import SideNav from '@unix/component/sidenav';
+import ToastMessage from '@unix/component/toastMessage';
 import { Wrapper, ChildrenGrid } from './style';
 
 const AppLayout = (props: { children?: JSX.Element | JSX.Element[] }) => {
@@ -38,6 +39,7 @@ const AppLayout = (props: { children?: JSX.Element | JSX.Element[] }) => {
         </ChildrenGrid>
       </Grid>
       <Outlet />
+      <ToastMessage />
     </Wrapper>
   );
 };

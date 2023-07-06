@@ -3,11 +3,12 @@ import { experimental_extendTheme as extendTheme } from '@mui/material/styles';
 declare module '@mui/material/styles/createPalette' {
   interface CommonColors {
     blue: string;
-    background: string;
     lightGrey: string;
     darkGrey: string;
     mindGrey: string;
     lightBrown: string;
+    black: string;
+    plainWhite: string;
   }
 }
 
@@ -18,7 +19,7 @@ export const theme = extendTheme({
       textTransform: 'none',
       fontSize: 14,
       fontWeight: 400,
-      color: '#424242',
+      color: '#616161',
     },
     button: {
       textTransform: 'none',
@@ -28,12 +29,14 @@ export const theme = extendTheme({
     light: {
       palette: {
         common: {
-          black: '#000',
+          black: '#212121',
           white: '#fafafa',
           blue: '#0B57F5',
           lightGrey: '#8D93A1',
           mindGrey: '#B1BBC6',
+          darkGrey: '#616161',
           lightBrown: '#efebe9',
+          plainWhite: '#ffffff',
         },
         primary: {
           main: '#4e342e',
@@ -42,7 +45,7 @@ export const theme = extendTheme({
           main: '#27C59A',
         },
         background: {
-          default: '#f5f5f5',
+          default: '#f1f1f1',
         },
       },
     },

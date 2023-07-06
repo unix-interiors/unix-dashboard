@@ -13,7 +13,7 @@ export const ChildrenGrid = styled(Grid)`
   min-height: 90vh;
   max-height: 90vh;
   padding: 2rem;
-  background-color: ${(props) => props.theme.palette.common.background};
+  background-color: ${(props) => props.theme.palette.background.default};
   position: relative;
   overflow: auto;
 `;
